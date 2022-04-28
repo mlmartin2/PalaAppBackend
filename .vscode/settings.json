@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/7dcddff7-562b-4bdc-b486-4873791b36ef/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/pala-backend",
+    "appService.deploySubpath": "."
+}

@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)t4k=hjz&2t07wv1u)7bch8d_&9yxs#-t089a#r_@3)x5(auc8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','mongodb+srv://martin:Z26aZdLZuFCZIvbS@projetos.5apm7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority']
+ALLOWED_HOSTS = ['*'] # '127.0.0.1','pala-backend.azurewebsites.net','paladb.mongo.cosmos.azure.com', 
 
 
 # Application definition
@@ -78,14 +78,10 @@ WSGI_APPLICATION = 'back.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'CLIENT': 
-        {   'host': 'mongodb+srv://martin:Z26aZdLZuFCZIvbS@projetos.5apm7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-            'name':'Tasks',
-            'authMechanism':'SCRAM-SHA-1',}
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
